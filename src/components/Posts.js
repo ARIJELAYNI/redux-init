@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
+import axios from 'axios'
 class Posts extends Component {
     componentDidMount() {
-        fetch('http://jsonplaceholder.typicode.com/posts')
-        .then(res => res.json())
-        .then(data => console.log(data))
+        axios.get('http://jsonplaceholder.typicode.com/posts')
+        .then(res =>  console.log(res.data))
     }
     render() {
         return (
